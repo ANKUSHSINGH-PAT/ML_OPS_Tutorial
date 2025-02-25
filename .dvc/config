@@ -1,0 +1,3 @@
+['remote "origin"']
+    url = s3://dvc
+    endpointurl = https://dagshub.com/ANKUSHSINGH-PAT/ML_OPS_Tutorial.s3
