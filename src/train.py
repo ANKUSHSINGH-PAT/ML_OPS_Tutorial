@@ -10,7 +10,7 @@ import os
 from sklearn.model_selection import train_test_split,GridSearchCV
 from urllib.parse import urlparse
 
-os.environ['MLFLOW_TRACKING_URI']="https://dagshub.com/ANKUSHSINGH-PAT/ML_OPS_Tutorial.git"
+os.environ['MLFLOW_TRACKING_URI']="https://dagshub.com/ANKUSHSINGH-PAT/ML_OPS_Tutorial.mlflow"
 os.environ['MLFLOW_TRACKING_USERNAME']="ANKUSHSINGH-PAT"
 os.environ["MLFLOW_TRACKING_PASSWORD"]="f81123b6c1143b7c172d3b55cf80e4ad123a347f"
 
@@ -28,7 +28,7 @@ def train(data_path,model_path,random_state,n_estimators,max_depth):
     X=data.drop(columns=["Outcome"])
     y=data['Outcome']
 
-    mlflow.set_tracking_uri("https://dagshub.com/api/v1/repo-buckets/s3/ANKUSHSINGH-PAT")
+    mlflow.set_tracking_uri("https://dagshub.com/ANKUSHSINGH-PAT/ML_OPS_Tutorial.mlflow")
 
 
     ## start the MLFLOW run
